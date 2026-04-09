@@ -5,12 +5,17 @@ public record Clothing(String name, double value) implements ProductTribute {
     private static final double TRIBUTE = 0.025;
 
     @Override
-    public double calculateTribute() {
-        return value * TRIBUTE;
+    public double getValue() {
+        return value;
     }
 
     @Override
-    public double getTribute() {
+    public double getTaxValue() {
         return TRIBUTE;
+    }
+
+    @Override
+    public String toString() {
+        return toStringStandard();
     }
 }

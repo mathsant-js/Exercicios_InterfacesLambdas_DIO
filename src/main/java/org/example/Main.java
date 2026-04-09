@@ -33,9 +33,9 @@ public class Main {
         );
 
         productTributeList.forEach(p -> {
-            System.out.println(p);
+            System.out.println(p.toString());
             System.out.println("Valor do tributo: R$" + p.calculateTribute());
-            System.out.println("Porcentagem de tributo: " + (100 * p.getTribute() + "%"));
+            System.out.println("Porcentagem de tributo: " + (100 * p.getTaxValue() + "%"));
             System.out.println();
         });
     }
