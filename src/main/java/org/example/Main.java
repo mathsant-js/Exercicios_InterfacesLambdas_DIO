@@ -2,6 +2,10 @@ package org.example;
 
 import org.example.exerc1.*;
 import org.example.exerc2.*;
+import org.example.exerc3.Circle;
+import org.example.exerc3.Rectangle;
+import org.example.exerc3.Shapes;
+import org.example.exerc3.Square;
 
 import java.util.List;
 
@@ -36,6 +40,22 @@ public class Main {
             System.out.println(p.toString());
             System.out.println("Valor do tributo: R$" + p.calculateTribute());
             System.out.println("Porcentagem de tributo: " + (100 * p.getTaxValue() + "%"));
+            System.out.println();
+        });
+
+        // Exercise 3
+        System.out.println();
+        System.out.println("Exercício 3");
+
+        List<Shapes> shapesList = List.of(
+                new Square(10),
+                new Rectangle(10, 5),
+                new Circle(3)
+        );
+
+        shapesList.forEach(shapes -> {
+            System.out.println(shapes.toString());
+            System.out.println("Área: " + shapes.calculateArea());
             System.out.println();
         });
     }
